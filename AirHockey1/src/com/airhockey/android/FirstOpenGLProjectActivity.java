@@ -1,4 +1,6 @@
-package com.firstopenglproject.android;
+package com.airhockey.android;
+
+
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -31,7 +33,7 @@ public class FirstOpenGLProjectActivity extends Activity {
 			glSurfaceView.setEGLContextClientVersion(2);
 			
 			//Assign our renderer
-			glSurfaceView.setRenderer(new FirstOpenGLProjectRenderer());
+			glSurfaceView.setRenderer(new AirHockeyRenderer());
 			rendererSet = true;
 		}else {
 			Toast.makeText(this,"This device does not support OpenGL ES 2.0", Toast.LENGTH_LONG).show();
