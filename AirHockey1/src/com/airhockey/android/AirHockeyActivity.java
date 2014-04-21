@@ -12,7 +12,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Toast;
 
-public class FirstOpenGLProjectActivity extends Activity {
+public class AirHockeyActivity extends Activity {
 	private GLSurfaceView glSurfaceView;
 	private boolean rendererSet = false;
 	@Override
@@ -33,7 +33,7 @@ public class FirstOpenGLProjectActivity extends Activity {
 			glSurfaceView.setEGLContextClientVersion(2);
 			
 			//Assign our renderer
-			glSurfaceView.setRenderer(new AirHockeyRenderer());
+			glSurfaceView.setRenderer(new AirHockeyRenderer(this));
 			rendererSet = true;
 		}else {
 			Toast.makeText(this,"This device does not support OpenGL ES 2.0", Toast.LENGTH_LONG).show();
